@@ -1,2 +1,2 @@
-# I2ML_ImageClassifier
-Group Project for the Intro to Machine Learning Course
+# Image Classifier
+Repository for the Group Project for the Intro to Machine Learning Course

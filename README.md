@@ -82,7 +82,6 @@ I2ML_ImageClassifier/
 
 ## Example Metrics
 
-- **Recall@k**: Fraction of queries for which at least one correct image is in the top-k retrieved.
 - **Accuracy@1**: Fraction of queries where the top-1 retrieved image is correct.
 - **Precision@k**: Average fraction of correct images in the top-k retrieved.
 

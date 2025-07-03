@@ -51,7 +51,7 @@ def submit_from_json(json_file_path, groupname, url="http://tatooine.disi.unitn.
         print(f"ERROR: Network error during submission: {e}")
 
 # Usage: Submit from JSON file in root directory
-json_filename = "test_Clip_336.json"  # Change this to your JSON filename
+json_filename = "TL_6_Epo1.json"  # Change this to your JSON filename
 submit_from_json(json_filename, groupname="Overfit & Underpaid")
 
 # Alternative: If you want to specify the full path

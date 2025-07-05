@@ -21,11 +21,13 @@ python -m venv .venv
 ### 2. Activate Virtual Environment
 
 **Windows:**
+
 ```bash
 .venv\Scripts\activate
 ```
 
 **macOS/Linux:**
+
 ```bash
 source .venv/bin/activate
 ```
@@ -37,6 +39,7 @@ pip install torch torchvision transformers scikit-learn pillow tqdm numpy
 ```
 
 **Or create a requirements.txt file:**
+
 ```txt
 torch>=2.0.0
 torchvision>=0.15.0
@@ -48,6 +51,7 @@ numpy>=1.24.0
 ```
 
 Then install:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -96,33 +100,37 @@ trainer.train()
 ## Key Components
 
 ### CLIPEncoder
+
 - Wrapper around CLIP vision model
 - L2-normalized embeddings for similarity computation
 
 ### SupConLoss
+
 - Supervised contrastive loss implementation
 - Temperature-scaled similarity computation
 
 ### BalancedBatchSampler
+
 - Ensures equal samples per class in each batch
 - Configurable classes and samples per batch
 
 ### Training Pipeline
+
 - Mixed precision training with gradient scaling
 - Automatic evaluation after each epoch
 - Model checkpointing and result saving
 
 ## Configuration Parameters
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `model_name` | "openai/clip-vit-large-patch14-336" | CLIP model variant |
-| `temperature` | 0.07 | Contrastive loss temperature |
-| `num_epochs` | 1 | Number of training epochs |
-| `learning_rate` | 1e-7 | Learning rate for optimizer |
-| `n_classes_per_batch` | 4 | Classes per training batch |
-| `n_samples_per_class` | 2 | Samples per class per batch |
-| `top_k` | 10 | Number of top retrievals to return |
+| Parameter             | Default                             | Description                        |
+| --------------------- | ----------------------------------- | ---------------------------------- |
+| `model_name`          | "openai/clip-vit-large-patch14-336" | CLIP model variant                 |
+| `temperature`         | 0.07                                | Contrastive loss temperature       |
+| `num_epochs`          | 1                                   | Number of training epochs          |
+| `learning_rate`       | 1e-7                                | Learning rate for optimizer        |
+| `n_classes_per_batch` | 4                                   | Classes per training batch         |
+| `n_samples_per_class` | 2                                   | Samples per class per batch        |
+| `top_k`               | 10                                  | Number of top retrievals to return |
 
 ## Output Files
 
@@ -139,6 +147,7 @@ trainer.train()
 ## Training Data Format
 
 Training images should be organized in class folders:
+
 ```
 train/
 ├── dogs/
